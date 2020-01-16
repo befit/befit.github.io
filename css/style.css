@@ -1,0 +1,115 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*  HEADER  */
+
+.header{
+	max-height: 10vh;
+	background: linear-gradient(to left,  #a04ac3, #00e7ff);
+	display: grid;
+	grid-template-columns: 20% 80%;
+	justify-content: center;
+	align-items: center;
+}
+
+.header h1{
+	font-size: 4vw;
+	font-weight: 900;
+	color: #9c20b1;
+	text-transform: uppercase;
+}
+
+.nav{
+	height: 100%;
+}
+
+.nav a {
+	display: inline-block;
+	width: auto;
+	height: 5vh;
+	margin-top: 1.5vh;
+	font-size: 3vw;
+	margin-right: 5vw;
+	position: relative;
+	color: #fff; /*задаём цвет ссылки*/
+	cursor: pointer;
+	line-height: 1; /*задаём высоту строки*/
+	text-decoration: none; /*убираем подчёркивание*/
+	transition: 0.3s;
+
+}
+.nav a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 0.5vh; /*задаём ширину линии*/
+	background-color: #ff0; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.nav a:hover:after,
+.nav a:first-child:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+
+}
+.nav a:hover{
+	color: #ff0;
+}
+/*  MAIN  */
+.main{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	min-height: 100vh;
+}
+
+.muscle-img img{
+	margin-top: 10vh;
+	height: 80vh;
+	width: auto;
+	}
+
+.reference h2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	font-size: 3vw;
+	color: #fff;
+	width: 30vw;
+	margin-top: 5vh;
+	height: 10vh;
+	background: #7297ea; 
+}
+
+.reference div{
+	width: 30vw;
+	height: auto;
+	padding: 3vw;
+	font-size: 1.5vw;
+	margin-top: 3vh;
+	background: #7297ea; 
+	color: #fff;
+	transition: 0.3s;
+}
+
+/*  FOOTER   */
+.footer{
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to left,  #a04ac3, #00e7ff);
+}
+
+.footer h2{
+	font-size: 3vw;
+	font-weight: 900;
+	color: #fff;
+
+}
